@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+jar {
+    baseName = 'user-management-domain'
+    version =  '1.0'
+}
+
+dependencies {
+    compile ("org.springframework.data:spring-data-jpa:2.0.2.RELEASE")
+    compile ("javax.persistence:persistence-api:1.0")
+    compile 'javax.validation:validation-api:2.0.0.Final'
+}
+
+repositories {
+    maven {
+        url 'https://repo.spring.io/libs-release'
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Management</title>
+    <link rel="stylesheet" href="css/usermanagement.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/usermanagement.js"></script>
+</head>
+<body>
+    <p>
+        <label id="userCollection">User collection</label>
+        <table id="userCollectionTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>email</th>
+                    <th>Address1</th>
+                    <th>Address2</th>
+                    <th>City</th>
+                    <th>Postal code</th>
+                    <th>Country</th>
+                    <th>Phone</th>
+                    <th>Retrieval time</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </p>
+    <p>
+        <button id="refreshUserCollection" type="button">Refresh user collection</button>
+    </p>
+    <p>
+        <form id="createUserForm" action="/">
+            <fieldset>
+                <legend id="newUserLegend">Create user&nbsp;</legend>
+                <label id="newUserLabel">Enter new user data:</label><br>
+                <br>
+                Name:<br>
+                <input type="text" name="name"><br>
+                email:<br>
+                <input type="text" name="email"><br>
+                Address1:<br>
+                <input type="text" name="address1"><br>
+                Address2:<br>
+                <input type="text" name="address2"><br>
+                City:<br>
+                <input type="text" name="city"><br>
+                Postal code:<br>
+                <input type="text" name="postalCode"><br>
+                Country:<br>
+                <input type="text" name="country"><br>
+                Phone:<br>
+                <input type="text" name="phone"><br>
+                <br>
+                <input type="submit" value="Add new user">
+            </fieldset>
+        </form>
+    </p>
+    <p>
+        <form id="deleteUserForm" action="/">
+            <fieldset>
+                <legend id="removeUserLegend">Remove user&nbsp;</legend>
+                <div class="removeUserDiv">
+                    <label id="removeUserLabel">Select user id:&nbsp;</label>
+                    <select>
+                        <option selected="selected"></option>
+                    </select>
+                </div>
+                <br>
+                <input type="submit" value="Remove user">
+            </fieldset>
+        </form>
+    </p>
+    <p>
+        <fieldset id="updateUserFieldset">
+            <legend id="updateUserLegend">Update user&nbsp;</legend>
+            <div>
+                <label id="updateUserLabel">Select user id:&nbsp;</label>
+                <select id="updateUserSelect">
+                    <option selected="selected"></option>
+                </select>
+            </div>
+            <form id="updateUserForm" action="/">
+                <br>
+                Name:<br>
+                <input type="text" name="name"><br>
+                email:<br>
+                <input type="text" name="email"><br>
+                Address1:<br>
+                <input type="text" name="address1"><br>
+                Address2:<br>
+                <input type="text" name="address2"><br>
+                City:<br>
+                <input type="text" name="city"><br>
+                Postal code:<br>
+                <input type="text" name="postalCode"><br>
+                Country:<br>
+                <input type="text" name="country"><br>
+                Phone:<br>
+                <input type="text" name="phone"><br>
+                <br>
+                <input type="submit" value="Update user">
+            </form>
+        </fieldset>
+    </p>
+</body>
+</html>

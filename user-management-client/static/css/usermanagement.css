@@ -1,0 +1,39 @@
+label#userCollection {
+    font: italic bold 17px/23px Georgia, serif;
+}
+
+table#userCollectionTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 51%;
+}
+
+table#userCollectionTable td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+table#userCollectionTable tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+form#createUserForm, form#deleteUserForm, fieldset#updateUserFieldset {
+    width: 31%;
+}
+
+label#newUserLabel, label#removeUserLabel, label#updateUserLabel {
+    font: italic 17px/23px Georgia, serif;
+}
+
+legend#newUserLegend, legend#removeUserLegend, legend#updateUserLegend {
+   font: italic bold 17px/19px Georgia, serif;
+}
+
+#wrap .removeUserDiv {
+    white-space: nowrap
+}
+
+form#updateUserForm {
+    display: none;
+}

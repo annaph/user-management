@@ -1,0 +1,23 @@
+<configuration debug="true" scanPeriod="420 seconds">
+    <property name="USR_MNG_CLIENT_HOME" value="."/>
+    
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<file>${USR_MNG_CLIENT_HOME}/logs/client.log</file>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+    		<fileNamePattern>${USR_MNG_CLIENT_HOME}/logs/client-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+    		<maxFileSize>3MB</maxFileSize>
+    		<maxHistory>31</maxHistory>
+    		<totalSizeCap>1GB</totalSizeCap>
+    	</rollingPolicy>
+    	<encoder>
+    		<pattern>%d %-5level [%thread] %logger{112}: %msg%n</pattern>
+    	</encoder>
+    </appender>    
+    
+    <logger name="com.user.management.client" level="debug"/>
+    
+    <root level="warn">
+    	<appender-ref ref="FILE"/>
+    </root>
+    
+</configuration>
